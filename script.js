@@ -1,3 +1,11 @@
+(function(){
+  var el=document.getElementById('promoDate');
+  if(!el) return;
+  var d=new Date();
+  function p(n){return (n<10?'0':'')+n;}
+  el.textContent=p(d.getDate())+'/'+p(d.getMonth()+1)+'/'+d.getFullYear();
+})();
+
 document.querySelectorAll('a[href^="#"]').forEach(function(a){
   a.addEventListener('click',function(e){
     var id=a.getAttribute('href');

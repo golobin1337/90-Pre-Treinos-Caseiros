@@ -161,16 +161,16 @@ section{border-top:1px solid var(--line)}
 /* ---- Bonuses ---- */
 .bonus{background:var(--surface-soft)}
 .bonus-list{display:flex;flex-direction:column;gap:12px;max-width:40rem;margin:28px auto 0}
-.bonus-card{display:flex;align-items:center;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px;box-shadow:var(--card-shadow);cursor:default;transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
+.bonus-card{display:grid;grid-template-columns:auto 1fr;align-items:center;column-gap:14px;row-gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px;box-shadow:var(--card-shadow);cursor:default;transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
 .bonus-card:hover{transform:translateY(-5px);box-shadow:var(--card-shadow-lg);border-color:var(--brand)}
-.bonus-img{flex:0 0 96px;width:96px;height:96px;border-radius:12px;object-fit:contain;background:var(--surface)}
-@media(min-width:640px){.bonus-img{flex:0 0 108px;width:108px;height:108px}}
-.bonus-body{flex:1;min-width:0}
+.bonus-img{grid-row:span 2;width:96px;height:96px;border-radius:12px;object-fit:contain;background:var(--surface)}
+@media(min-width:640px){.bonus-img{width:108px;height:108px}}
+.bonus-body{min-width:0;align-self:end}
 .bonus-body h3{font-size:14.5px;font-weight:800;color:var(--ink);line-height:1.25}
 .bonus-body p{font-size:13px;color:var(--ink-soft);margin-top:4px}
-.bonus-price{flex:0 0 auto;text-align:right;white-space:nowrap}
-.bonus-price .old{display:block;color:var(--ink-soft);text-decoration:line-through;font-size:12px}
-.bonus-price .free{display:block;color:var(--ok);font-weight:800;font-size:12.5px;margin-top:2px}
+.bonus-price{align-self:start;display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px;white-space:nowrap}
+.bonus-price .old{color:var(--ink-soft);text-decoration:line-through;font-size:12px}
+.bonus-price .free{color:var(--ok);font-weight:800;font-size:13.5px}
 
 /* ---- Pricing ---- */
 .pricing{background:linear-gradient(180deg,var(--surface),var(--surface-soft))}
